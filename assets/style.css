@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: none;
+}
+
+body {
+  display: flex;
+}
+
+button {
+  cursor: pointer;
+}
+
+.menu {
+  width: 20%;
+  height: 100vh;
+  background-color: rgb(111, 158, 230);
+  display: flex;
+  flex-direction: column;
+  padding: 150px 0;
+  align-items: center;
+}
+.menu__logo {
+  font-size: 8rem;
+  margin-bottom: 15px;
+}
+.menu menu li {
+  list-style: none;
+}
+.menu menu li button {
+  width: 150px;
+  margin: 10px 0;
+  text-align: start;
+  padding: 5px;
+  font-size: 2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.view {
+  width: 80%;
+  height: 100vh;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.view input {
+  width: 100%;
+  padding: 5px 15px;
+  font-size: 2.5rem;
+  border-radius: 999px;
+  outline: none;
+  border: none;
+}
+.view .search {
+  position: relative;
+  width: 60%;
+}
+.view .search input {
+  width: 100%;
+}
+.view .search input:focus ~ label, .view .search input:valid ~ label {
+  top: 5%;
+  left: 15%;
+  color: black;
+  transition: 0.5s;
+  font-size: 1.5rem;
+}
+.view .search label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;
+  font-weight: 500;
+  color: gray;
+  cursor: text;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+.view .newWord legend {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.view .newWord label {
+  font-size: 2rem;
+}
+.view .newWord button {
+  font-size: 1.5rem;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  margin: 15px 0;
+  margin-left: 100%;
+  transform: translate(-100%);
+}
+.view .words {
+  width: 80%;
+  height: 60%;
+  background-color: rgb(90, 90, 90);
+  border-radius: 5px;
+  padding: 15px;
+}/*# sourceMappingURL=style.css.map */
