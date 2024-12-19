@@ -1,4 +1,6 @@
-const url = "localhost:7167/palavra"
+import { viewUpdate } from "./viewManager"
+
+const url = "https://localhost:7167/palavra"
  
 export const addNewWord = (obj) => {
     fetch(url, {
@@ -18,16 +20,18 @@ export const findById = (id) => {
     fetch(urlWithId, {
         method: 'GET'
     })
-    .then(date => console.log(date))
+    .then(resp => resp.json())
+    .then(date => date)
     .catch(error => console.log(error))
 } 
 
 export const findByWord = (word) => {
-    const urlWithId = url + `/search/${word}`
+    const urlWithId = url + `/search?word=${word}`
     fetch(urlWithId, {
         method: 'GET'
     })
-    .then(date => console.log(date.json()))
+    .then(resp => resp.json())
+    .then(date => date)
     .catch(error => console.log(error))
 } 
 
@@ -35,6 +39,7 @@ export const getSome = () => {
     fetch(url, {
         method: 'GET'
     })
-    .then(date => console.log(date))
+    .then(resp => resp.json())
+    .then(date => viewUpdate(date))
     .catch(error => console.log(error)) 
 }

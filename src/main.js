@@ -1,16 +1,20 @@
+import { setViewContainer, viewUpdate } from "./viewManager.js"
 import { addNewWord, findByWord, findOne } from "./wordControler.js"
 
 
 const formAddNewWord = document.querySelector('[data="newWord"]')
 const search = document.querySelector('[data="search"]') 
+const viewContainer = document.querySelector('[data="words"]')
 
+setViewContainer(viewContainer)
+getSome()
 
 formAddNewWord.addEventListener("submit", e => {
     e.preventDefault()
 
     value = {
-        'word': formAddNewWord.querySelector("#word").value,
-        'description' : formAddNewWord.querySelector("#wordDescription").value
+        'Name': formAddNewWord.querySelector("#word").value,
+        'Meaning' : formAddNewWord.querySelector("#wordDescription").value
     }
     addNewWord(value)
 })
