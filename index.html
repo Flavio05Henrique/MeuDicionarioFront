@@ -10,17 +10,17 @@
         <section class="menu">
             <h1 class="menu__logo">Logo</h1>
             <menu>
-                <li><button>Adicionar</button></li>
+                <li><button data="openAdd">Adicionar</button></li>
                 <li><button>Revisar</button></li>
                 <li><button>Conjuntos</button></li>
             </menu>
             </section>
         <section class="view">
             <form class="search" data="search">
-                <input type="text" id="search" class="search" required >
+                <input type="text" id="search" required >
                 <label for="search">Buscar palavra</label>
             </form>
-            <form class="newWord" data="newWord">
+            <form class="newWord heightZero" data="newWord">
                 <legend>Nova palavra</legend>
                 <label for="word">Palavra</label>
                 <input type="text" name="word" id="word">
@@ -28,33 +28,38 @@
                 <input type="" name="wordDescription" id="wordDescription">
                 <button type="submit">Adicionar</button>
             </form>
-            <div class="words" data="words">
-                <div class="word">Palavaaaaaaaa</div>
-                <div class="word" id="">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palaaaaaaaaavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavra</div>
-                <div class="word">Palavaaaaaara</div>
-                <div class="word">Palavra</div>
-                
+            <div class="words" data="wordsContainer">
+                <div class="words__controls">
+                    <button class="plus"></button>
+                    <button class="refresh" title="refresh"></button>
+                </div>
+                <div class="words__container">
+                    <div class="word">Palavaaaaaaaa</div>
+                    <div class="word" id="">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palaaaaaaaaavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavra</div>
+                    <div class="word">Palavaaaaaara</div>
+                    <div class="word">Palavra</div>
+                </div>
             </div>
         </section>
     </body>

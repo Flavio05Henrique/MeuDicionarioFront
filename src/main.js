@@ -1,10 +1,11 @@
 import { setViewContainer, viewUpdate } from "./viewManager.js"
-import { addNewWord, findByWord, findOne } from "./wordControler.js"
+import { addNewWord, findByWord, getSome } from "./wordControler.js"
 
 
 const formAddNewWord = document.querySelector('[data="newWord"]')
 const search = document.querySelector('[data="search"]') 
-const viewContainer = document.querySelector('[data="words"]')
+const viewContainer = document.querySelector('[data="wordsContainer"]')
+const addNewWordOpenBnt = document.querySelector('[data="openAdd"]')
 
 setViewContainer(viewContainer)
 getSome()
@@ -12,7 +13,7 @@ getSome()
 formAddNewWord.addEventListener("submit", e => {
     e.preventDefault()
 
-    value = {
+    const value = {
         'Name': formAddNewWord.querySelector("#word").value,
         'Meaning' : formAddNewWord.querySelector("#wordDescription").value
     }
@@ -21,5 +22,10 @@ formAddNewWord.addEventListener("submit", e => {
 
 search.addEventListener("submit", e => {
     e.preventDefault()
-    console.log(findByWord(search.querySelector("#search").value))
+    findByWord(search.querySelector("#search").value)
+})
+
+addNewWordOpenBnt.addEventListener('click', e => {
+    const getAddNewWordContainer = formAddNewWord
+    getAddNewWordContainer.classList.toggle('heightZero')
 })

@@ -1,6 +1,10 @@
-import { viewUpdate } from "./viewManager"
+import { setListWord, viewUpdate } from "./viewManager.js"
 
 const url = "https://localhost:7167/palavra"
+const skipTake = {
+    'skip': 0,
+    'take': 0
+}
  
 export const addNewWord = (obj) => {
     fetch(url, {
@@ -31,7 +35,7 @@ export const findByWord = (word) => {
         method: 'GET'
     })
     .then(resp => resp.json())
-    .then(date => date)
+    .then(date => viewUpdate([date]))
     .catch(error => console.log(error))
 } 
 
@@ -40,6 +44,9 @@ export const getSome = () => {
         method: 'GET'
     })
     .then(resp => resp.json())
-    .then(date => viewUpdate(date))
+    .then(date => {
+        viewUpdate(date)
+        setListWord(date)
+    })
     .catch(error => console.log(error)) 
 }

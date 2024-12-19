@@ -63,6 +63,7 @@ button {
 .view .search {
   position: relative;
   width: 60%;
+  margin: 15px 0;
 }
 .view .search input {
   width: 100%;
@@ -85,6 +86,11 @@ button {
   transform: translate(-50%, -50%);
   transition: 0.5s;
 }
+.view .newWord {
+  overflow: hidden;
+  height: 250px;
+  transition: 0.5s;
+}
 .view .newWord legend {
   font-size: 3rem;
   margin-bottom: 15px;
@@ -102,11 +108,44 @@ button {
   transform: translate(-100%);
 }
 .view .words {
+  display: flex;
+  flex-direction: column;
   width: 80%;
   height: 60%;
+  gap: 10px;
   background-color: rgb(90, 90, 90);
   border-radius: 5px;
   padding: 15px;
+}
+.view .words__container {
+  width: 100%;
+  height: 90%;
+}
+.view .words__controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  height: 10%;
+}
+.view .words__controls button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+.view .words__controls button:hover {
+  transform: rotate(30deg);
+  background-color: rgba(255, 255, 255, 0.116);
+}
+.view .words__controls .refresh {
+  background: url(/assets/img/arrows-rotate-solid.svg) no-repeat center center;
+  background-size: 35px;
+}
+.view .words__controls .plus {
+  background: url(/assets/img/plus-solid.svg) no-repeat center center;
 }
 .view .words .word {
   display: inline-block;
@@ -119,4 +158,9 @@ button {
   border-right: 5px solid black;
   border-bottom: 5px solid black;
   cursor: pointer;
+}
+
+.heightZero {
+  height: 0px !important;
+  transition: 0.5s;
 }/*# sourceMappingURL=style.css.map */
